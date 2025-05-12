@@ -62,13 +62,13 @@ const config = {
           600: "#e6e299", // slightly darker for hover states
         },
         green: {
-          900: "#3a4d52",
-          800: "#455a60", // slightly lighter for hover states
-          700: "#506870", // even lighter for active states
+          900: "#1e3a27", // Updated to match the logo green
+          800: "#2a4a33", // slightly lighter for hover states
+          700: "#355a3e", // even lighter for active states
         },
         zinc: {
-          900: "#3a4d52", // replacing with the green color
-          800: "#455a60", // slightly lighter version
+          900: "#1e3a27", // replacing with the green color
+          800: "#2a4a33", // slightly lighter version
         },
       },
       borderRadius: {

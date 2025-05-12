@@ -13,7 +13,7 @@ export default function ContactPage() {
 
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
-                <div>
+                <div className="ribbon-input">
                   <label htmlFor="name" className="block mb-2">
                     Name
                   </label>
@@ -23,7 +23,7 @@ export default function ContactPage() {
                     className="w-full p-3 bg-transparent border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                   />
                 </div>
-                <div>
+                <div className="ribbon-input">
                   <label htmlFor="email" className="block mb-2">
                     Email
                   </label>
@@ -34,7 +34,7 @@ export default function ContactPage() {
                   />
                 </div>
               </div>
-              <div>
+              <div className="ribbon-input">
                 <label htmlFor="subject" className="block mb-2">
                   Subject
                 </label>
@@ -44,7 +44,7 @@ export default function ContactPage() {
                   className="w-full p-3 bg-transparent border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                 />
               </div>
-              <div>
+              <div className="ribbon-input">
                 <label htmlFor="message" className="block mb-2">
                   Message
                 </label>

@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import { CartProvider } from "@/context/cart-context"
 import { Toaster } from "@/components/ui/toaster"
+import { ScrollProgress } from "@/components/scroll-progress"
 
 // Load Playfair Display font
 const playfair = Playfair_Display({
@@ -30,6 +31,9 @@ export default function RootLayout({
       <body className={`${playfair.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="dark">
           <CartProvider>
+            {/* Scroll progress indicator */}
+            <ScrollProgress />
+
             {/* Header with integrated ribbon */}
             <SiteHeader />
 
