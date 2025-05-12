@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 196 16% 27%; /* #3a4d52 in HSL */
+  --foreground: 0 0% 100%;
+  --card: 196 16% 27%;
+  --card-foreground: 0 0% 100%;
+  --popover: 196 16% 27%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 55 80% 82%; /* This is approximately #f7f3aa in HSL */
+  --primary-foreground: 196 16% 27%;
+  --secondary: 196 16% 27%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 196 16% 20%;
+  --muted-foreground: 0 0% 80%;
+  --accent: 55 80% 82%;
+  --accent-foreground: 196 16% 27%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 196 16% 35%;
+  --input: 196 16% 35%;
+  --ring: 55 80% 82%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 196 16% 27%;
+  --foreground: 0 0% 100%;
+  --card: 196 16% 27%;
+  --card-foreground: 0 0% 100%;
+  --popover: 196 16% 27%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 55 80% 82%;
+  --primary-foreground: 196 16% 27%;
+  --secondary: 196 16% 35%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 196 16% 20%;
+  --muted-foreground: 0 0% 80%;
+  --accent: 55 80% 82%;
+  --accent-foreground: 196 16% 27%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 196 16% 35%;
+  --input: 196 16% 35%;
+  --ring: 55 80% 82%;
+}
+
+body {
+  background-color: #3a4d52;
+  color: white;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Grid background for pixelated headings */
+.grid-bg {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: center;
+}
+
+/* Ribbon pattern - static version */
+.ribbon-container {
+  width: 100%;
+  height: 100%;
+  background-color: #3a4d52; /* Match the site background */
+}
+
+.ribbon-pattern {
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/ribbon.png");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+}
