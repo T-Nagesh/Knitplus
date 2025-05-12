@@ -3,53 +3,53 @@
 @tailwind utilities;
 
 :root {
-  --background: 144 30% 20%; /* Updated to match the logo green */
-  --foreground: 0 0% 100%;
-  --card: 144 30% 20%;
-  --card-foreground: 0 0% 100%;
-  --popover: 144 30% 20%;
-  --popover-foreground: 0 0% 100%;
-  --primary: 55 80% 82%; /* This is approximately #f7f3aa in HSL */
-  --primary-foreground: 144 30% 20%;
-  --secondary: 144 30% 20%;
-  --secondary-foreground: 0 0% 100%;
-  --muted: 144 30% 15%;
-  --muted-foreground: 0 0% 80%;
-  --accent: 55 80% 82%;
-  --accent-foreground: 144 30% 20%;
+  --background: 55 80% 82%; /* #f7f3aa in HSL */
+  --foreground: 144 30% 20%; /* #1e3a27 in HSL */
+  --card: 55 80% 82%;
+  --card-foreground: 144 30% 20%;
+  --popover: 55 80% 82%;
+  --popover-foreground: 144 30% 20%;
+  --primary: 144 30% 20%; /* Green as primary */
+  --primary-foreground: 55 80% 82%;
+  --secondary: 55 85% 88%;
+  --secondary-foreground: 144 30% 20%;
+  --muted: 55 70% 75%;
+  --muted-foreground: 144 30% 35%;
+  --accent: 144 30% 20%;
+  --accent-foreground: 55 80% 82%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
   --border: 144 30% 30%;
   --input: 144 30% 30%;
-  --ring: 55 80% 82%;
+  --ring: 144 30% 20%;
   --radius: 0.5rem;
 }
 
 .dark {
-  --background: 144 30% 20%;
-  --foreground: 0 0% 100%;
-  --card: 144 30% 20%;
-  --card-foreground: 0 0% 100%;
-  --popover: 144 30% 20%;
-  --popover-foreground: 0 0% 100%;
-  --primary: 55 80% 82%;
-  --primary-foreground: 144 30% 20%;
-  --secondary: 144 30% 30%;
-  --secondary-foreground: 0 0% 100%;
-  --muted: 144 30% 15%;
-  --muted-foreground: 0 0% 80%;
-  --accent: 55 80% 82%;
-  --accent-foreground: 144 30% 20%;
+  --background: 55 80% 82%;
+  --foreground: 144 30% 20%;
+  --card: 55 80% 82%;
+  --card-foreground: 144 30% 20%;
+  --popover: 55 80% 82%;
+  --popover-foreground: 144 30% 20%;
+  --primary: 144 30% 20%;
+  --primary-foreground: 55 80% 82%;
+  --secondary: 55 85% 88%;
+  --secondary-foreground: 144 30% 20%;
+  --muted: 55 70% 75%;
+  --muted-foreground: 144 30% 35%;
+  --accent: 144 30% 20%;
+  --accent-foreground: 55 80% 82%;
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
   --border: 144 30% 30%;
   --input: 144 30% 30%;
-  --ring: 55 80% 82%;
+  --ring: 144 30% 20%;
 }
 
 body {
-  background-color: #1e3a27; /* Updated to match the logo green */
-  color: white;
+  background-color: #f7f3aa; /* Yellow background */
+  color: #1e3a27; /* Green text */
 }
 
 @layer base {
@@ -63,8 +63,8 @@ body {
 
 /* Grid background for pixelated headings */
 .grid-bg {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-image: linear-gradient(to right, rgba(30, 58, 39, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 58, 39, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
   background-position: center;
 }
@@ -73,7 +73,7 @@ body {
 .ribbon-container {
   width: 100%;
   height: 100%;
-  background-color: #1e3a27; /* Updated to match the logo green */
+  background-color: #f7f3aa; /* Match the site background */
 }
 
 .ribbon-pattern {
@@ -106,7 +106,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("/images/lightlogo.png");
+  background-image: url("/images/darklogo.png");
   background-repeat: repeat;
   background-size: 200px auto;
   opacity: 0;
@@ -146,7 +146,7 @@ body {
 }
 
 .ribbon-focus:focus {
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2), 0 0 0 4px rgba(247, 243, 170, 0.5);
+  box-shadow: 0 0 0 2px rgba(30, 58, 39, 0.2), 0 0 0 4px rgba(247, 243, 170, 0.5);
   outline: none;
 }
 
@@ -197,7 +197,7 @@ body {
   left: 0;
   right: 0;
   height: 3px;
-  background-image: url("/images/lightlogo.png");
+  background-image: url("/images/darklogo.png");
   background-repeat: repeat-x;
   background-size: auto 100%;
   transform-origin: left;
@@ -217,7 +217,7 @@ body {
   right: 0;
   bottom: -2px;
   height: 2px;
-  background-image: url("/images/lightlogo.png");
+  background-image: url("/images/darklogo.png");
   background-repeat: repeat-x;
   background-size: auto 100%;
   animation: ribbonLoading 10s linear infinite;
@@ -245,4 +245,12 @@ body {
 
 .ribbon-card:hover::before {
   transform: translateX(0);
+}
+
+/* Box highlight */
+.box-highlight {
+  background-color: #f7f3aa;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  display: inline-block;
 }

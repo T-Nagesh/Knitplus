@@ -127,29 +127,29 @@ export default function WebshopPage() {
 
   return (
     <div className="pt-16">
-      <div className="bg-green-900 min-h-screen">
+      <div className="bg-yellow-500 min-h-screen">
         <div className="container mx-auto px-4 py-8">
           <div className="flex items-center mb-8">
-            <Link href="/" className="text-white hover:text-yellow-400">
+            <Link href="/" className="text-green-900 hover:text-green-700">
               <div className="w-5 h-5">
                 <Image src="/icons/chevron-left.svg" alt="Back" width={20} height={20} />
               </div>
               <span className="sr-only">Back to home</span>
             </Link>
-            <h1 className="text-2xl font-bold text-white ml-4 font-serif">Webshop</h1>
+            <h1 className="text-2xl font-bold text-green-900 ml-4 font-serif">Webshop</h1>
           </div>
 
           {isLoading ? (
             <div className="py-20">
               <LoadingRibbon className="mb-8" />
-              <p className="text-center text-white">Loading our sustainable collection...</p>
+              <p className="text-center text-green-900">Loading our sustainable collection...</p>
             </div>
           ) : (
             <div className="space-y-16">
               {products.map((product) => (
                 <div key={product.id} className="flex flex-col md:flex-row gap-8 ribbon-card">
                   <div className="md:w-1/2 relative">
-                    <div className="relative aspect-[3/4] bg-green-800 overflow-hidden">
+                    <div className="relative aspect-[3/4] bg-yellow-600/30 overflow-hidden">
                       <Image
                         src={getDisplayImage(product) || "/placeholder.svg"}
                         alt={product.name}
@@ -161,35 +161,35 @@ export default function WebshopPage() {
                       {product.imageAlt && (
                         <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-1">
                           <div
-                            className={`w-2 h-2 rounded-full ${getDisplayImage(product) === product.image ? "bg-white" : "bg-gray-500"}`}
+                            className={`w-2 h-2 rounded-full ${getDisplayImage(product) === product.image ? "bg-green-900" : "bg-green-800/50"}`}
                           ></div>
                           <div
-                            className={`w-2 h-2 rounded-full ${getDisplayImage(product) === product.imageAlt ? "bg-white" : "bg-gray-500"}`}
+                            className={`w-2 h-2 rounded-full ${getDisplayImage(product) === product.imageAlt ? "bg-green-900" : "bg-green-800/50"}`}
                           ></div>
                         </div>
                       )}
                     </div>
                   </div>
                   <div className="md:w-1/2">
-                    <h2 className="text-2xl font-bold text-white mb-2 font-serif">{product.name}</h2>
-                    <p className="text-white mb-6">{product.description}</p>
+                    <h2 className="text-2xl font-bold text-green-900 mb-2 font-serif">{product.name}</h2>
+                    <p className="text-green-900 mb-6">{product.description}</p>
 
                     <div className="space-y-2 mb-8">
-                      <p className="text-white">
-                        <span className="text-gray-400">Date of Creation:</span> {product.date}
+                      <p className="text-green-900">
+                        <span className="text-green-800">Date of Creation:</span> {product.date}
                       </p>
-                      <p className="text-white">
-                        <span className="text-gray-400">Material:</span> {product.material}
+                      <p className="text-green-900">
+                        <span className="text-green-800">Material:</span> {product.material}
                       </p>
-                      <p className="text-white">
-                        <span className="text-gray-400">Price:</span> {product.price}
+                      <p className="text-green-900">
+                        <span className="text-green-800">Price:</span> {product.price}
                       </p>
                     </div>
 
                     <div className="space-y-4">
                       <div className="relative ribbon-input">
                         <select
-                          className="w-full appearance-none bg-white text-green-900 py-2 px-4 pr-8 rounded cursor-pointer font-serif"
+                          className="w-full appearance-none bg-yellow-600/30 text-green-900 py-2 px-4 pr-8 rounded cursor-pointer font-serif"
                           value={selectedRentalPeriods[product.id] || ""}
                           onChange={(e) => handleRentalPeriodChange(product.id, e.target.value)}
                         >
@@ -206,7 +206,7 @@ export default function WebshopPage() {
                       </div>
 
                       <Button
-                        className="w-full bg-yellow-500 hover:bg-yellow-600 text-green-900 py-2 rounded transition flex items-center justify-center font-serif"
+                        className="w-full bg-green-900 hover:bg-green-800 text-yellow-500 py-2 rounded transition flex items-center justify-center font-serif"
                         onClick={() => handleAddToCart(product)}
                       >
                         <ShoppingCart className="mr-2 h-5 w-5" />

@@ -62,7 +62,7 @@ const config = {
           600: "#e6e299", // slightly darker for hover states
         },
         green: {
-          900: "#1e3a27", // Updated to match the logo green
+          900: "#1e3a27", // Logo green
           800: "#2a4a33", // slightly lighter for hover states
           700: "#355a3e", // even lighter for active states
         },

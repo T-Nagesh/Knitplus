@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 export default function SignUpPage() {
   return (
     <div className="pt-16">
-      <section className="py-20 bg-black text-white min-h-screen">
+      <section className="py-20 bg-yellow-500 text-green-900 min-h-screen">
         <div className="container mx-auto px-4">
           <div className="max-w-md mx-auto">
             <h1 className="text-4xl font-bold mb-8 text-center">Join KNIT+</h1>
@@ -12,7 +12,7 @@ export default function SignUpPage() {
               Sign up to receive updates on new collections, sustainability initiatives, and exclusive offers.
             </p>
 
-            <div className="bg-zinc-900 p-8 rounded-lg">
+            <div className="bg-yellow-600/30 p-8 rounded-lg">
               <form className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block mb-2">
@@ -21,7 +21,7 @@ export default function SignUpPage() {
                   <input
                     id="name"
                     type="text"
-                    className="w-full p-3 bg-transparent border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                    className="w-full p-3 bg-yellow-500 border border-yellow-600/50 rounded-md focus:outline-none focus:ring-2 focus:ring-green-900 focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -31,7 +31,7 @@ export default function SignUpPage() {
                   <input
                     id="email"
                     type="email"
-                    className="w-full p-3 bg-transparent border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                    className="w-full p-3 bg-yellow-500 border border-yellow-600/50 rounded-md focus:outline-none focus:ring-2 focus:ring-green-900 focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -41,7 +41,7 @@ export default function SignUpPage() {
                   <input
                     id="password"
                     type="password"
-                    className="w-full p-3 bg-transparent border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                    className="w-full p-3 bg-yellow-500 border border-yellow-600/50 rounded-md focus:outline-none focus:ring-2 focus:ring-green-900 focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -51,27 +51,27 @@ export default function SignUpPage() {
                   <input
                     id="confirmPassword"
                     type="password"
-                    className="w-full p-3 bg-transparent border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                    className="w-full p-3 bg-yellow-500 border border-yellow-600/50 rounded-md focus:outline-none focus:ring-2 focus:ring-green-900 focus:border-transparent"
                   />
                 </div>
                 <div className="flex items-center">
                   <input
                     id="newsletter"
                     type="checkbox"
-                    className="h-4 w-4 border-gray-600 rounded focus:ring-emerald-500"
+                    className="h-4 w-4 border-yellow-600/50 rounded focus:ring-green-900"
                   />
                   <label htmlFor="newsletter" className="ml-2 block text-sm">
                     Subscribe to our newsletter
                   </label>
                 </div>
-                <Button type="submit" className="w-full bg-emerald-500 hover:bg-emerald-600">
+                <Button type="submit" className="w-full bg-green-900 hover:bg-green-800 text-yellow-500">
                   Create Account
                 </Button>
               </form>
               <div className="mt-6 text-center text-sm">
                 <p>
                   Already have an account?{" "}
-                  <Link href="/login" className="text-emerald-400 hover:underline">
+                  <Link href="/login" className="text-green-900 hover:underline">
                     Log in
                   </Link>
                 </p>

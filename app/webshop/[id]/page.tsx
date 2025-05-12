@@ -59,31 +59,31 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   }, [product])
 
   if (!product) {
-    return <div className="pt-16 text-white">Product not found</div>
+    return <div className="pt-16 text-green-900">Product not found</div>
   }
 
   return (
     <div className="pt-16">
-      <div className="bg-green-900 min-h-screen">
+      <div className="bg-yellow-500 min-h-screen">
         <div className="container mx-auto px-4 py-8">
           <div className="flex items-center mb-8">
-            <Link href="/webshop" className="text-white hover:text-yellow-400 mr-4">
+            <Link href="/webshop" className="text-green-900 hover:text-green-700 mr-4">
               <ChevronLeft className="h-5 w-5" />
             </Link>
-            <div className="bg-green-800 rounded-full px-4 py-2 flex items-center space-x-4">
-              <Link href="/about" className="text-white hover:text-yellow-400 transition-colors px-2 font-serif">
+            <div className="bg-yellow-600/30 rounded-full px-4 py-2 flex items-center space-x-4">
+              <Link href="/about" className="text-green-900 hover:text-green-700 transition-colors px-2 font-serif">
                 ABOUT KNIT+
               </Link>
               <Link
                 href="/how-does-it-work"
-                className="text-white hover:text-yellow-400 transition-colors px-2 font-serif"
+                className="text-green-900 hover:text-green-700 transition-colors px-2 font-serif"
               >
                 HOW DOES IT WORK?
               </Link>
-              <Link href="/webshop" className="text-white font-bold transition-colors px-2 font-serif">
+              <Link href="/webshop" className="text-green-900 font-bold transition-colors px-2 font-serif">
                 WEBSHOP
               </Link>
-              <Link href="/contact" className="text-white hover:text-yellow-400 transition-colors px-2 font-serif">
+              <Link href="/contact" className="text-green-900 hover:text-green-700 transition-colors px-2 font-serif">
                 CONTACT
               </Link>
             </div>
@@ -91,7 +91,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/2 relative">
-              <div className="relative aspect-[3/4] bg-green-800 overflow-hidden">
+              <div className="relative aspect-[3/4] bg-yellow-600/30 overflow-hidden">
                 <Image
                   src={currentImage || "/placeholder.svg"}
                   alt={product.name}
@@ -102,32 +102,32 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 {product.imageAlt && (
                   <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-1">
                     <div
-                      className={`w-2 h-2 rounded-full ${currentImage === product.image ? "bg-white" : "bg-gray-500"}`}
+                      className={`w-2 h-2 rounded-full ${currentImage === product.image ? "bg-green-900" : "bg-green-800/50"}`}
                     ></div>
                     <div
-                      className={`w-2 h-2 rounded-full ${currentImage === product.imageAlt ? "bg-white" : "bg-gray-500"}`}
+                      className={`w-2 h-2 rounded-full ${currentImage === product.imageAlt ? "bg-green-900" : "bg-green-800/50"}`}
                     ></div>
                   </div>
                 )}
               </div>
             </div>
             <div className="md:w-1/2">
-              <h1 className="text-2xl font-bold text-white mb-2 font-serif">{product.name}</h1>
-              <p className="text-white mb-6">{product.description}</p>
+              <h1 className="text-2xl font-bold text-green-900 mb-2 font-serif">{product.name}</h1>
+              <p className="text-green-900 mb-6">{product.description}</p>
 
               <div className="space-y-2 mb-8">
-                <p className="text-white">
-                  <span className="text-gray-400">Date of Creation:</span> {product.date}
+                <p className="text-green-900">
+                  <span className="text-green-800">Date of Creation:</span> {product.date}
                 </p>
-                <p className="text-white">
-                  <span className="text-gray-400">Material:</span> {product.material}
+                <p className="text-green-900">
+                  <span className="text-green-800">Material:</span> {product.material}
                 </p>
               </div>
 
               <div className="space-y-4">
                 <div className="relative">
                   <select
-                    className="w-full appearance-none bg-white text-green-900 py-2 px-4 pr-8 rounded cursor-pointer font-serif"
+                    className="w-full appearance-none bg-yellow-600/30 text-green-900 py-2 px-4 pr-8 rounded cursor-pointer font-serif"
                     defaultValue=""
                   >
                     <option value="" disabled>
@@ -142,65 +142,13 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                   </div>
                 </div>
 
-                <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-green-900 py-2 rounded transition font-serif">
+                <Button className="w-full bg-green-900 hover:bg-green-800 text-yellow-500 py-2 rounded transition font-serif">
                   Add to Cart
                 </Button>
               </div>
             </div>
           </div>
         </div>
-
-        {/* Footer */}
-        <footer className="bg-green-900 text-white py-12 border-t border-green-800 mt-16">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="flex justify-center md:justify-start">
-                <div className="w-40">
-                  <Image src="/images/knit-logo.png" alt="KNIT+ Logo" width={160} height={60} />
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-bold mb-4 font-serif">Get in Touch</h3>
-                <p className="mb-2">
-                  <span className="text-gray-400">Phone:</span> (480) 555-0123
-                </p>
-                <p className="mb-2">
-                  <span className="text-gray-400">Address:</span> Hogeschool van Amsterdam, TTH
-                </p>
-                <p className="mb-2">
-                  <span className="text-gray-400">E-mail:</span> knit+official@hva.nl
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-bold mb-4 font-serif">Company Info</h3>
-                <ul className="space-y-2">
-                  <li>
-                    <Link href="/about" className="text-white hover:text-yellow-400 transition-colors">
-                      About Us
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/how-does-it-work" className="text-white hover:text-yellow-400 transition-colors">
-                      How does it work?
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/webshop" className="text-white hover:text-yellow-400 transition-colors">
-                      Webshop
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/privacy-policy" className="text-white hover:text-yellow-400 transition-colors">
-                      Privacy Policy
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </footer>
       </div>
     </div>
   )

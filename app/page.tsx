@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section with updated heading */}
-      <section className="relative w-full h-screen flex items-center justify-center bg-green-900">
+      <section className="relative w-full h-screen flex items-center justify-center bg-yellow-500">
         {/* Background pattern with reduced opacity */}
         <div className="absolute inset-0 w-full h-full opacity-30">
           <Image src="/images/hero.png" alt="Knitted pattern background" fill priority className="object-cover" />
@@ -15,17 +15,19 @@ export default function Home() {
 
         {/* Content overlay */}
         <div className="relative z-10 text-center px-4 max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 font-serif text-white">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 font-serif text-green-900">
             Own the Style,
             <br />
             Not the Stuff
           </h1>
 
           {/* Secondary tagline */}
-          <p className="text-xl md:text-2xl mb-10 font-serif text-yellow-400">Keep the Look, Return the Rest</p>
+          <p className="text-xl md:text-2xl mb-10 font-serif text-green-900 bg-yellow-600/30 inline-block px-4 py-2 rounded-md">
+            Keep the Look, Return the Rest
+          </p>
 
           <Link href="/webshop">
-            <Button className="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-serif text-lg px-8 py-6">
+            <Button className="bg-green-900 hover:bg-green-800 text-yellow-500 font-serif text-lg px-8 py-6">
               Explore Collection
             </Button>
           </Link>
@@ -34,19 +36,19 @@ export default function Home() {
 
       {/* Main Content Section */}
       <SectionReveal>
-        <section className="py-20 bg-green-900 text-white">
+        <section className="py-20 bg-yellow-500 text-green-900">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 font-serif">
-                  One <span className="text-yellow-400">sweater</span> at a time.
+                  One <span className="bg-yellow-600/30 px-2 py-1 rounded">sweater</span> at a time.
                 </h2>
               </div>
 
               <div className="mb-16">
                 <h2 className="text-2xl md:text-3xl font-serif mb-8">What if fashion wasn't something we owned</h2>
                 <h2 className="text-2xl md:text-3xl font-serif">
-                  but something we <span className="text-yellow-400">shared</span>?
+                  but something we <span className="bg-yellow-600/30 px-2 py-1 rounded">shared</span>?
                 </h2>
               </div>
 
@@ -56,7 +58,7 @@ export default function Home() {
                     <strong>KNIT+</strong> is an innovative project launched in Amsterdam by the Amsterdam University of
                     Applied Sciences (AUAS) in collaboration with digital society experts, computational designers and
                     fashion specialists to create an{" "}
-                    <span className="text-yellow-400 ribbon-border">eco-conscious approach to fashion</span>.
+                    <span className="bg-yellow-600/30 px-2 py-1 rounded">eco-conscious approach to fashion</span>.
                   </p>
 
                   <p className="text-lg font-serif">
@@ -70,7 +72,7 @@ export default function Home() {
                     In Collaboration with AMFI's Digital Society School, Computational Designers explore how a shared
                     ownership model can promote sustainable fashion. By combining digital innovation with
                     community-driven solutions, we aim to{" "}
-                    <span className="text-yellow-400 ribbon-border">
+                    <span className="bg-yellow-600/30 px-2 py-1 rounded">
                       reduce waste and extend the life-cycle of items
                     </span>{" "}
                     and creating a circular system for fashion's future.
@@ -78,9 +80,7 @@ export default function Home() {
 
                   <div className="mt-8">
                     <Link href="/about">
-                      <Button className="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-serif">
-                        Learn More
-                      </Button>
+                      <Button className="bg-green-900 hover:bg-green-800 text-yellow-500 font-serif">Learn More</Button>
                     </Link>
                   </div>
                 </div>
@@ -92,20 +92,20 @@ export default function Home() {
 
       {/* Call to Action */}
       <SectionReveal>
-        <section className="py-16 bg-green-800 text-white">
+        <section className="py-16 bg-yellow-600/30 text-green-900">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-8 font-serif">Your Choice Makes a Difference!</h2>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link href="/webshop">
-                  <Button className="bg-yellow-500 hover:bg-yellow-600 text-green-900 w-full sm:w-auto font-serif">
+                  <Button className="bg-green-900 hover:bg-green-800 text-yellow-500 w-full sm:w-auto font-serif">
                     Browse Collection
                   </Button>
                 </Link>
                 <Link href="/how-does-it-work">
                   <Button
                     variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-green-900 w-full sm:w-auto font-serif"
+                    className="border-green-900 text-green-900 hover:bg-yellow-600/30 w-full sm:w-auto font-serif"
                   >
                     How It Works
                   </Button>

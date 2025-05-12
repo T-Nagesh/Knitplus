@@ -30,18 +30,18 @@ export default function RentalsPage() {
 
   return (
     <div className="pt-16">
-      <div className="bg-black min-h-screen">
+      <div className="bg-yellow-500 min-h-screen">
         <div className="container mx-auto px-4 py-8">
           <div className="flex items-center mb-8">
-            <Link href="/account" className="text-white hover:text-emerald-400 mr-4">
+            <Link href="/account" className="text-green-900 hover:text-green-700 mr-4">
               <ChevronLeft className="h-5 w-5" />
             </Link>
-            <h1 className="text-2xl font-bold text-white">My Rentals</h1>
+            <h1 className="text-2xl font-bold text-green-900">My Rentals</h1>
           </div>
 
           <div className="space-y-6">
             {rentals.map((rental) => (
-              <div key={rental.id} className="bg-zinc-900 rounded-lg p-6">
+              <div key={rental.id} className="bg-yellow-600/30 rounded-lg p-6">
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="md:w-1/4">
                     <div className="relative aspect-square">
@@ -57,18 +57,18 @@ export default function RentalsPage() {
                   <div className="md:w-3/4">
                     <div className="flex justify-between items-start">
                       <div>
-                        <h2 className="text-xl font-bold text-white">{rental.product}</h2>
-                        <p className="text-gray-400">Order #{rental.id}</p>
+                        <h2 className="text-xl font-bold text-green-900">{rental.product}</h2>
+                        <p className="text-green-800">Order #{rental.id}</p>
                       </div>
 
                       <div className="flex items-center">
                         {rental.status === "active" ? (
-                          <div className="flex items-center text-emerald-400">
+                          <div className="flex items-center text-green-900">
                             <Clock className="h-4 w-4 mr-1" />
                             <span>Active Rental</span>
                           </div>
                         ) : (
-                          <div className="flex items-center text-gray-400">
+                          <div className="flex items-center text-green-800">
                             <CheckCircle className="h-4 w-4 mr-1" />
                             <span>Completed</span>
                           </div>
@@ -78,43 +78,43 @@ export default function RentalsPage() {
 
                     <div className="grid md:grid-cols-2 gap-4 mt-4">
                       <div>
-                        <p className="text-gray-400">Pickup Date</p>
-                        <p className="text-white">{rental.pickupDate}</p>
+                        <p className="text-green-800">Pickup Date</p>
+                        <p className="text-green-900">{rental.pickupDate}</p>
                       </div>
                       <div>
-                        <p className="text-gray-400">Return Date</p>
-                        <p className="text-white">{rental.returnDate}</p>
+                        <p className="text-green-800">Return Date</p>
+                        <p className="text-green-900">{rental.returnDate}</p>
                       </div>
                       <div>
-                        <p className="text-gray-400">Deposit (Refundable)</p>
-                        <p className="text-emerald-400">{rental.deposit}</p>
+                        <p className="text-green-800">Deposit (Refundable)</p>
+                        <p className="text-green-900">{rental.deposit}</p>
                       </div>
                       <div>
-                        <p className="text-gray-400">Total Amount</p>
-                        <p className="text-white">{rental.total}</p>
+                        <p className="text-green-800">Total Amount</p>
+                        <p className="text-green-900">{rental.total}</p>
                       </div>
                     </div>
 
                     <div className="mt-6 flex flex-wrap gap-4">
                       {rental.status === "active" && (
                         <>
-                          <Button className="bg-emerald-500 hover:bg-emerald-600">
+                          <Button className="bg-green-900 hover:bg-green-800 text-yellow-500">
                             <RotateCcw className="h-4 w-4 mr-2" />
                             Extend Rental
                           </Button>
-                          <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black">
+                          <Button variant="outline" className="border-green-900 text-green-900 hover:bg-yellow-600/30">
                             Report Issue
                           </Button>
                         </>
                       )}
 
                       {rental.status === "completed" && (
-                        <Button className="bg-emerald-500 hover:bg-emerald-600">Rent Again</Button>
+                        <Button className="bg-green-900 hover:bg-green-800 text-yellow-500">Rent Again</Button>
                       )}
 
                       <Link
                         href={`/account/rentals/${rental.id}`}
-                        className="text-emerald-400 hover:underline flex items-center"
+                        className="text-green-900 hover:underline flex items-center"
                       >
                         View Details
                       </Link>
